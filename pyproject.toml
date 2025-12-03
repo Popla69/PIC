@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pic-immune-core"
+version = "1.0.0"
+description = "PIC v1 (Popla Immune Core) - Defensive cybersecurity system for Python applications"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "PIC Development Team"}
+]
+keywords = ["security", "anomaly-detection", "defensive", "cybersecurity", "runtime-protection"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: Apache Software License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Security",
+]
+
+dependencies = [
+    "pyyaml>=6.0",
+    "cryptography>=41.0.0",
+    "flask>=3.0.0",
+    "prometheus-client>=0.19.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "hypothesis>=6.92.0",
+    "flake8>=6.1.0",
+    "black>=23.12.0",
+    "mypy>=1.7.0",
+    "types-PyYAML",
+]
+
+[project.scripts]
+pic = "pic.cli:main"
+pic-realworld = "pic.realworld.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ['py39']
+
+[tool.mypy]
+python_version = "3.9"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "--cov=src/pic --cov-report=html --cov-report=term-missing"
+
+[tool.coverage.run]
+source = ["src/pic"]
+omit = ["*/tests/*", "*/test_*.py"]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "if TYPE_CHECKING:",
+]

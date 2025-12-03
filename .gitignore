@@ -1,0 +1,85 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+ENV/
+env/
+pic_venv/
+venv310/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.hypothesis/
+*.log
+test_data/
+*_test_data/
+test_pic_data/
+test_pic_data2/
+mipab9_test_data/
+mipab11_test_data/
+attack_test_data/
+demo_data/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# PIC Data
+pic_data/
+*.db
+*.key
+audit.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+output.txt
+realworld_tests.log
+
+# Test results (keep markdown summaries, ignore raw output)
+*_TEST_OUTPUT.txt
+MIPAB9_TEST_RESULTS.txt
+
+# Session summaries (too many, keep only key ones)
+SESSION_*.md
+COMPLETED_UPTO.md
+IMPLEMENTATION_STATUS.md
+INSTALLATION_STATUS.md
+TODAY_*.md
+OVERNIGHT_*.md
+FINAL_REALWORLD_STATUS.md
+
+# Keep these important docs
+!README.md
+!START_HERE.md
+!PROJECT_COMPLETE.md

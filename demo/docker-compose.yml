@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  pic-brain:
+    build: ..
+    container_name: pic-brain
+    ports:
+      - "8443:8443"
+    volumes:
+      - pic-data:/var/lib/pic
+      - ./config.yaml:/etc/pic/config.yaml:ro
+    environment:
+      - PIC_API_LISTEN_ADDRESS=0.0.0.0
+      - PIC_API_LISTEN_PORT=8443
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8443/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+  demo-app:
+    build: ./demo-app
+    container_name: demo-app
+    depends_on:
+      - pic-brain
+    environment:
+      - PIC_BRAIN_URL=http://pic-brain:8443
+    restart: unless-stopped
+
+volumes:
+  pic-data:
