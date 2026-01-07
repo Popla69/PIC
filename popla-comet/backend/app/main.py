@@ -68,7 +68,7 @@ async def health_check() -> JSONResponse:
 
 
 @app.get("/api/v1/status")
-async def api_status() -> dict[str, str | bool]:
+async def api_status() -> dict:
     """API status endpoint with detailed service information."""
     return {
         "api_version": "v1",
