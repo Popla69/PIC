@@ -1,0 +1,93 @@
+
+ ____   ___  ____  _        _       ____ ___  __  __ _____ _____ 
+|  _ \ / _ \|  _ \| |      / \     / ___/ _ \|  \/  | ____|_   _|
+| |_) | | | | |_) | |     / _ \   | |  | | | | |\/| |  _|   | |  
+|  __/| |_| |  __/| |___ / ___ \  | |__| |_| | |  | | |___  | |  
+|_|    \___/|_|   |_____/_/   \_\  \____\___/|_|  |_|_____| |_|  
+                                                                   
+=================================================================
+   Computer Vision & AI-Powered Image Analysis Platform
+=================================================================
+
+Version: 0.1.0
+Status:  ✅ Initial Setup Complete
+
+📱 ANDROID APP          🖥️  BACKEND API
+   Kotlin + Compose        FastAPI + Python
+   Material 3              OpenAI GPT-4 Vision
+   Modern UI               Computer Vision
+
+=================================================================
+
+🚀 QUICK START:
+
+   1. Setup Environment:
+      $ cp .env.example .env
+      $ # Edit .env with your API keys
+
+   2. Start Backend (Docker):
+      $ docker-compose up -d
+
+   3. Start Backend (Local):
+      $ cd backend
+      $ python -m venv venv && source venv/bin/activate
+      $ pip install -r requirements.txt
+      $ python -m app.main
+
+   4. Open Android App:
+      $ # Open android-app/ in Android Studio
+      $ # Or: cd android-app && ./gradlew installDebug
+
+=================================================================
+
+📚 DOCUMENTATION:
+
+   📘 README.md           - Project Overview
+   ⚡ QUICKSTART.md       - 5-Minute Setup Guide
+   🏗️  ARCHITECTURE.md     - Technical Design
+   📁 PROJECT_STRUCTURE.md - File Organization
+   🤝 CONTRIBUTING.md     - Contribution Guide
+   📋 INDEX.md            - Documentation Index
+   ✅ SETUP_COMPLETE.md   - Setup Verification
+
+=================================================================
+
+🔗 KEY ENDPOINTS:
+
+   API Docs:    http://localhost:8000/docs
+   Health:      http://localhost:8000/health
+   Status:      http://localhost:8000/api/v1/status
+
+=================================================================
+
+💡 HELPFUL COMMANDS:
+
+   $ make help             # View all commands
+   $ make docker-up        # Start with Docker
+   $ make run-backend      # Run backend locally
+   $ make test-all         # Run all tests
+
+=================================================================
+
+🎯 NEXT STEPS:
+
+   1. Read QUICKSTART.md for detailed setup
+   2. Explore the API documentation
+   3. Review ARCHITECTURE.md for design details
+   4. Check CONTRIBUTING.md before coding
+   5. Start building amazing features! 🚀
+
+=================================================================
+
+📞 NEED HELP?
+
+   - Documentation: ./docs/
+   - Issues: GitHub Issues
+   - API Docs: http://localhost:8000/docs
+
+=================================================================
+
+Built with ❤️  by the Popla Team
+
+Happy Coding! 🎉
+

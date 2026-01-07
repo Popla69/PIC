@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Popla Comet</string>
+    <string name="app_description">Computer Vision &amp; AI Analysis</string>
+    <string name="capture_image">Capture Image</string>
+    <string name="select_image">Select Image</string>
+    <string name="analyze">Analyze</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+    <string name="storage_permission_required">Storage permission is required</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="analyzing">Analyzing image...</string>
+    <string name="analysis_complete">Analysis complete</string>
+</resources>
